@@ -37,7 +37,7 @@ jobs:
 
   docker:
     name: Docker release
-    needs: Release
+    needs: release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
@@ -92,6 +92,7 @@ jobs:
 
   helm:
     name: Helm release
+    needs: docker
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
