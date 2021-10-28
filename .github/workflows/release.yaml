@@ -97,21 +97,11 @@ jobs:
     steps:
       - name: Checkout Current
         uses: actions/checkout@v2
-        if: ${{ needs.release.outputs.new_release_published == 'false' }}
         with:
-          fetch-depth: 0
-      
-      - name: Checkout new release
-        uses: actions/checkout@v2
-        if: ${{ needs.release.outputs.new_release_published == 'true' }}
-        with:
-          ref: "v${{ needs.release.outputs.new_release_version }}"
           fetch-depth: 0
 
       - name: Configure Git
         run: |
-          git remote remove origin
-          git tag -d v${{ needs.release.outputs.new_release_version }} || true
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
@@ -126,3 +116,8 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
           charts_dir: charts
+
+      - name: Clean tag
+        run: |
+          git tag -d v${{ needs.release.outputs.new_release_version }} || true
+          git push origin :v${{ needs.release.outputs.new_release_version }} || true
