@@ -18,7 +18,8 @@ jobs:
             @semantic-release/release-notes-generator \
             @semantic-release/git \
             @semantic-release/github \
-            @semantic-release/changelog
+            @semantic-release/changelog \
+            semantic-release-helm
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
