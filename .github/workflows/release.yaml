@@ -64,6 +64,7 @@ jobs:
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule,pattern=nightly
+            type=semver,pattern={{version}},value=${{ needs.release.outputs.new_release_version }}
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
