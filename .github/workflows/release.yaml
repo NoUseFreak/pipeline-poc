@@ -110,7 +110,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git remove remote origin
+          git remote remove origin
           git tag -d v${{ needs.release.outputs.new_release_version }} || true
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
