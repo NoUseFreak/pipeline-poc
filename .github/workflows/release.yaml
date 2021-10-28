@@ -45,13 +45,13 @@ jobs:
           echo "new_release_version ${{ needs.release.outputs.new_release_version }}"
       - name: Checkout new release
         uses: actions/checkout@v2
-        if: steps.semantic.outputs.new_release_published == 'true'
+        if: ${{ steps.semantic.outputs.new_release_published == 'true' }}
         with:
           ref: "v${{ needs.release.outputs.new_release_version }}"
       
       - name: Checkout Current
         uses: actions/checkout@v2
-        if: steps.semantic.outputs.new_release_published == 'false'
+        if: ${{ steps.semantic.outputs.new_release_published == 'false' }}
       
       - name: Docker meta
         id: meta
