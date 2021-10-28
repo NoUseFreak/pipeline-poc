@@ -41,8 +41,8 @@ jobs:
     steps:
       - name: DEBUG
         run: |
-          echo "new_release_published needs.release.outputs.new_release_published"
-          echo "new_release_version needs.release.outputs.new_release_version"
+          echo "new_release_published ${{ needs.release.outputs.new_release_published }}"
+          echo "new_release_version ${{ needs.release.outputs.new_release_version }}"
       - name: Checkout new release
         uses: actions/checkout@v2
         if: steps.semantic.outputs.new_release_published == 'true'
