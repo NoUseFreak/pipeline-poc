@@ -2,6 +2,26 @@ apiVersion: v1
 entries:
   test:
   - apiVersion: v2
+    appVersion: 1.55.0
+    created: "2021-10-29T01:29:04.823532+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 54ed8e83105e28bc6690ec4a8a4f1680199e238904cf576e3f39331b636b2c2d
+    name: test
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.46.0/test-0.46.0.tgz
+    version: 0.46.0
+  - apiVersion: v2
+    appVersion: 1.54.0
+    created: "2021-10-29T01:29:04.633174+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 83bf54c6cc3bc56e002bff1a59ebb13804b8d345035db2c77881ed3848c20572
+    name: test
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.45.0/test-0.45.0.tgz
+    version: 0.45.0
+  - apiVersion: v2
     appVersion: 1.52.0
     created: "2021-10-29T01:09:22.498591+02:00"
     description: A Helm chart for Kubernetes
@@ -71,4 +91,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.35.0/test-0.35.0.tgz
     version: 0.35.0
-generated: "2021-10-29T01:09:22.498629+02:00"
+generated: "2021-10-29T01:29:04.823603+02:00"
