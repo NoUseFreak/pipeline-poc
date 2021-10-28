@@ -5,7 +5,7 @@ on:
       - 'master'
 
 jobs:
-  release:
+  version:
     name: Semantic release
     runs-on: ubuntu-latest
     outputs:
@@ -25,6 +25,7 @@ jobs:
             @semantic-release/git
             @semantic-release/github
             semantic-release-helm
+          dry_run: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Do something when a new release published
@@ -34,21 +35,15 @@ jobs:
           echo ${{ steps.semantic.outputs.new_release_major_version }}
           echo ${{ steps.semantic.outputs.new_release_minor_version }}
           echo ${{ steps.semantic.outputs.new_release_patch_version }}
+          git diff
 
   docker:
     name: Docker release
-    needs: release
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
         uses: actions/checkout@v2
-        if: ${{ needs.release.outputs.new_release_published == 'false' }}
-      
-      - name: Checkout new release
-        uses: actions/checkout@v2
-        if: ${{ needs.release.outputs.new_release_published == 'true' }}
-        with:
-          ref: "v${{ needs.release.outputs.new_release_version }}"
 
       - name: Docker meta
         id: meta
@@ -60,7 +55,7 @@ jobs:
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule,pattern=nightly
-            type=semver,pattern={{version}},value=${{ needs.release.outputs.new_release_version }}
+            type=semver,pattern={{version}},value=${{ needs.version.outputs.new_release_version }}
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
@@ -92,7 +87,7 @@ jobs:
 
   helm:
     name: Helm release
-    needs: [release, docker]
+    needs: [version, docker]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
