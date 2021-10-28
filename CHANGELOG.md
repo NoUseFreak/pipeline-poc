@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.0.0...v1.1.0) (2021-10-28)
+
+
+### Features
+
+* Add chart ([11e821b](https://github.com/NoUseFreak/pipeline-poc/commit/11e821bd4566efa99230e7fdc7b9fc87b78085fd))
+* Testing helm integration ([8f78605](https://github.com/NoUseFreak/pipeline-poc/commit/8f786053c68b118541fe6bbe6643e1d5f0ae7eea))
+* Testing helm integration ([441c866](https://github.com/NoUseFreak/pipeline-poc/commit/441c866c08e964cceb336d84ecb68a6cd94bcbef))
+
 # 1.0.0 (2021-10-28)
 
 
