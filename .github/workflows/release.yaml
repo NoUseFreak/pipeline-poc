@@ -92,7 +92,7 @@ jobs:
 
   helm:
     name: Helm release
-    needs: docker
+    needs: [release, docker]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
