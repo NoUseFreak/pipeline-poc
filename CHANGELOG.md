@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.15.0...v1.16.0) (2021-10-28)
+
+
+### Features
+
+* Testing ([29106b9](https://github.com/NoUseFreak/pipeline-poc/commit/29106b90a2296977f29c22f4c95377af41fc3352))
+
 # [1.15.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.14.0...v1.15.0) (2021-10-28)
 
 
