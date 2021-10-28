@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    name: Release
+    name: Semantic release
     runs-on: ubuntu-latest
     outputs:
       new_release_version: "${{ steps.semantic.outputs.new_release_version }}"
@@ -36,14 +36,10 @@ jobs:
           echo ${{ steps.semantic.outputs.new_release_patch_version }}
 
   docker:
-    needs: release
+    name: Docker release
+    needs: Release
     runs-on: ubuntu-latest
     steps:
-      - name: DEBUG
-        run: |
-          echo "new_release_published ${{ needs.release.outputs.new_release_published }}"
-          echo "new_release_version ${{ needs.release.outputs.new_release_version }}"
-                
       - name: Checkout Current
         uses: actions/checkout@v2
         if: ${{ needs.release.outputs.new_release_published == 'false' }}
@@ -93,3 +89,37 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  helm:
+    name: Helm release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Current
+        uses: actions/checkout@v2
+        if: ${{ needs.release.outputs.new_release_published == 'false' }}
+        with:
+          fetch-depth: 0
+      
+      - name: Checkout new release
+        uses: actions/checkout@v2
+        if: ${{ needs.release.outputs.new_release_published == 'true' }}
+        with:
+          ref: "v${{ needs.release.outputs.new_release_version }}"
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.2.1
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          charts_dir: charts
