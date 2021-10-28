@@ -9,7 +9,12 @@
         "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
       }
     ],
+    ["semantic-release-helm",
+      {
+        "chartPath": "./charts/test"
+      }
+    ],
     ["@semantic-release/github"]
   ],
-  "branches": ["master","main"]
+  "branches": ["master", "main"]
 }
