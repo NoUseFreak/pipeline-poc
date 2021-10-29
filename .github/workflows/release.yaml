@@ -103,26 +103,3 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  helm:
-    name: Helm release
-    needs: [version, docker]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Current
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.2.1
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        with:
-          charts_dir: charts
-
-      - name: Clean tag
-        run: |
-          git tag -d v${{ needs.release.outputs.new_release_version }} || true
-          git push origin :v${{ needs.release.outputs.new_release_version }} || true
