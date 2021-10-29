@@ -7,7 +7,6 @@ on:
 jobs:
   docker:
     name: Docker build
-    needs: version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
