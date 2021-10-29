@@ -8,4 +8,4 @@ env:
 
 jobs:
   release:
-    uses: NoUseFreak/pipeline-poc/.github/workflows/test/release.yaml@master
+    uses: stenic/.github/workflows/release-docker-helm.yaml@main
