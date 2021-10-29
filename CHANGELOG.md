@@ -1,3 +1,16 @@
+# [1.74.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.73.0...v1.74.0) (2021-10-29)
+
+
+### Features
+
+* Testing ([b0861f1](https://github.com/NoUseFreak/pipeline-poc/commit/b0861f1a7a6033f6ae18c88314e4c5612da42987))
+* Testing ([ee51835](https://github.com/NoUseFreak/pipeline-poc/commit/ee5183547caab6f141d8f1b3089bdb906fe44db2))
+* Testing ([76b14a6](https://github.com/NoUseFreak/pipeline-poc/commit/76b14a6c5eb66835fe52d0173c53537f03ed81bc))
+* Testing ([393e1c0](https://github.com/NoUseFreak/pipeline-poc/commit/393e1c0f7aa3ab75cf32066bf5025cc45b2edccd))
+* Testing ([7adad6d](https://github.com/NoUseFreak/pipeline-poc/commit/7adad6d6e5ee490fe206beb749533ecf819184e8))
+* Testing ([b377609](https://github.com/NoUseFreak/pipeline-poc/commit/b377609a06d8a1e97a02b99d558a629f350a113e))
+* Testing ([dd56989](https://github.com/NoUseFreak/pipeline-poc/commit/dd5698940bd64dc6ba5414ca4e0d2a5bc0f68ac2))
+
 # [1.73.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.72.0...v1.73.0) (2021-10-29)
 
 
