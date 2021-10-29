@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   test:
   - apiVersion: v2
+    appVersion: 1.78.18
+    created: "2021-10-29T22:03:59.504907432Z"
+    description: New stuff
+    digest: 6fbc36136b05560050897c510ce7e68553e7a80b45b776a120fdd182cd9a42ec
+    name: test
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.61.18/test-0.61.18.tgz
+    version: 0.61.18
+  - apiVersion: v2
     appVersion: 1.78.17
     created: "2021-10-29T21:48:26.20950534Z"
     description: New stuff
@@ -241,4 +251,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/NoUseFreak/releases/download/test-0.54.0/test-0.54.0.tgz
     version: 0.54.0
-generated: "2021-10-29T21:48:26.209723143Z"
+generated: "2021-10-29T22:03:59.505129145Z"
