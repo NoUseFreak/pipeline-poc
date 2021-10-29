@@ -3,7 +3,8 @@ on:
   push:
     branches:
       - 'master'
-
+env:
+  DOCKER_IMAGE: ghcr.io/nousefreak/pipeline-poc
 jobs:
   docker:
     name: Docker build
@@ -17,7 +18,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            ghcr.io/nousefreak/pipeline-poc
+            ${{ env.DOCKER_IMAGE }}
           tags: |
             type=ref,event=branch
             type=raw,value=latest
@@ -43,7 +44,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-to: type=registry,ref=ghcr.io/nousefreak/pipeline-poc
+          cache-to: type=gha
 
   version:
     name: Semantic release
@@ -105,7 +106,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ghcr.io/nousefreak/pipeline-poc
+            ${{ env.DOCKER_IMAGE }}
           # generate Docker tags based on the following events/attributes
           tags: |
             type=ref,event=branch
@@ -135,4 +136,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=registry,ref=ghcr.io/nousefreak/pipeline-poc
+          cache-from: type=gha
