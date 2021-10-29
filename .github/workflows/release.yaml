@@ -23,7 +23,7 @@ jobs:
       - name: Install cr
         run: |
           version=v1.2.1
-          cache_dir=$RUNNER_TOOL_CACHE/ct/$version/$(uname -m)
+          cache_dir=$RUNNER_TOOL_CACHE/ct
           mkdir -p "$cache_dir"
           curl -sSLo cr.tar.gz "https://github.com/helm/chart-releaser/releases/download/$version/chart-releaser_${version#v}_linux_amd64.tar.gz"
           tar -xzf cr.tar.gz -C "$cache_dir"
@@ -48,6 +48,7 @@ jobs:
             git+https://github.com/NoUseFreak/semantic-release-helm.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PATH: "$RUNNER_TOOL_CACHE/ct:$PATH"
       - name: Do something when a new release published
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
