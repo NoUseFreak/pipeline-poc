@@ -18,7 +18,8 @@ jobs:
         with:
           images: |
             ghcr.io/nousefreak/pipeline-poc
-
+          tags: |
+            type=ref,event=branch
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
