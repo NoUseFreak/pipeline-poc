@@ -8,4 +8,4 @@ env:
 
 jobs:
   release:
-    uses: stenic/.github/workflows/release-docker-helm.yaml@main
+    uses: stenic/.github/.github/workflows/release-docker-helm.yaml@main
