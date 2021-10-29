@@ -5,6 +5,7 @@ on:
       - 'master'
 env:
   DOCKER_IMAGE: ghcr.io/nousefreak/pipeline-poc
+
 jobs:
   docker:
     name: Docker build
