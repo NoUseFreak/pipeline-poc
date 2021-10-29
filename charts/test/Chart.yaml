@@ -2,5 +2,5 @@ apiVersion: v2
 name: test
 description: New stuff
 type: application
-version: 0.61.17
-appVersion: 1.78.17
+version: 0.61.18
+appVersion: 1.78.18
