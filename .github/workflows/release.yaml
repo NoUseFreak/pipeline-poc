@@ -14,6 +14,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install cr
+        run: |
+          version=v1.2.1
+          cache_dir=$RUNNER_TOOL_CACHE/ct/$version/$(uname -m)
+          curl -sSLo cr.tar.gz "https://github.com/helm/chart-releaser/releases/download/$version/chart-releaser_${version#v}_linux_amd64.tar.gz"
+          tar -xzf cr.tar.gz -C "$cache_dir"
+          rm -f cr.tar.gz
+          export PATH="$cache_dir:$PATH"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
+
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         id: semantic
@@ -94,15 +114,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Configure Git
-        run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
-      - name: Install Helm
-        uses: azure/setup-helm@v1
-        with:
-          version: v3.4.0
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
