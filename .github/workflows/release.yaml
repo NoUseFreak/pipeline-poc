@@ -8,6 +8,6 @@ env:
 
 jobs:
   release:
-    uses: stenic/.github/.github/workflows/release-docker-helm.yaml@main
+    uses: stenic/github-workflows/.github/workflows/release-docker-helm.yaml@main
     secrets:
       token: ${{ secrets.GH_TOKEN }}
