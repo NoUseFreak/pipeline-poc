@@ -1,3 +1,10 @@
+## [1.78.3](https://github.com/NoUseFreak/pipeline-poc/compare/v1.78.2...v1.78.3) (2021-10-29)
+
+
+### Bug Fixes
+
+* Testing ([eeaeab7](https://github.com/NoUseFreak/pipeline-poc/commit/eeaeab762e9ee3a2d7f039b45e8ac88909fa30f6))
+
 ## [1.78.2](https://github.com/NoUseFreak/pipeline-poc/compare/v1.78.1...v1.78.2) (2021-10-29)
 
 
