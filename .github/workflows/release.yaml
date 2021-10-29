@@ -8,4 +8,4 @@ env:
 
 jobs:
   release:
-    uses: NoUseFreak/pipeline-poc/test/release.yaml
+    uses: NoUseFreak/pipeline-poc/test/release.yaml@master
