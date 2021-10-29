@@ -83,6 +83,7 @@ jobs:
       - name: Do something when a new release published
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
+          echo ${{ steps.semantic.outputs.new_release_published }}
           echo ${{ steps.semantic.outputs.new_release_version }}
           echo ${{ steps.semantic.outputs.new_release_major_version }}
           echo ${{ steps.semantic.outputs.new_release_minor_version }}
@@ -91,7 +92,7 @@ jobs:
   docker_release:
     name: Docker release
     needs: version
-    if: ${{ needs.version.outputs.new_release_version == 'true' }}
+    if: ${{ needs.version.outputs.new_release_published == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Current
