@@ -107,6 +107,7 @@ jobs:
             ghcr.io/nousefreak/pipeline-poc
           # generate Docker tags based on the following events/attributes
           tags: |
+            type=ref,event=branch
             type=semver,pattern={{version}},value=${{ needs.version.outputs.new_release_version }}
             type=semver,pattern={{major}}.{{minor}},value=${{ needs.version.outputs.new_release_version }}
             type=semver,pattern={{major}},value=${{ needs.version.outputs.new_release_version }}
