@@ -13,7 +13,7 @@
       "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
     }],
     ["semantic-release-docker", {
-      "name": "nousefreak/imagename"
+      "name": "ghcr.io/nousefreak/pipeline-poc"
     }],
     ["@semantic-release/github"]
   ],
