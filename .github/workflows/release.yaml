@@ -108,8 +108,8 @@ jobs:
           # generate Docker tags based on the following events/attributes
           tags: |
             type=semver,pattern={{version}},value=${{ needs.version.outputs.new_release_version }}
-            type=semver,pattern={{major}}.{{minor}},value=${{ needs.version.outputs.new_release_major_version }}.${{ needs.version.outputs.new_release_minor_version }}
-            type=semver,pattern={{major}},value=${{ needs.version.outputs.new_release_major_version }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ needs.version.outputs.new_release_version }}
+            type=semver,pattern={{major}},value=${{ needs.version.outputs.new_release_version }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
