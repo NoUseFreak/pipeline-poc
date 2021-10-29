@@ -43,6 +43,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-to: type=registry,ref=ghcr.io/nousefreak/pipeline-poc
 
   version:
     name: Semantic release
@@ -134,4 +135,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=registry,ref=ghcr.io/nousefreak/pipeline-poc:latest
+          cache-from: type=registry,ref=ghcr.io/nousefreak/pipeline-poc
