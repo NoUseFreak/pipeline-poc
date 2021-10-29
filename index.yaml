@@ -2,13 +2,13 @@ apiVersion: v1
 entries:
   test:
   - apiVersion: v2
-    appVersion: 1.65.0
-    created: "2021-10-29T00:57:48.596335592Z"
+    appVersion: 1.66.0
+    created: "2021-10-29T01:02:15.479292649Z"
     description: New stuff
-    digest: cb2e23b53e784eddd44cda45e56a5b342811c634ebca9e228f896650a897d907
+    digest: afa98b1d8b4f924f3812e839c07419b481c324d2f5f0d4644bf6b936bed72fde
     name: test
     type: application
     urls:
     - https://github.com/NoUseFreak/NoUseFreak/releases/download/test-0.52.0/test-0.52.0.tgz
     version: 0.52.0
-generated: "2021-10-29T00:57:48.596342492Z"
+generated: "2021-10-29T01:02:15.47930145Z"
