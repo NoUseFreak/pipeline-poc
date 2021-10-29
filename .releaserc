@@ -3,19 +3,18 @@
     ["@semantic-release/commit-analyzer"],
     ["@semantic-release/release-notes-generator"],
     ["@semantic-release/changelog"],
-    ["semantic-release-helm",
-      {
-        "chartPath": "./charts/test",
-        "crPublish": true,
-        "crConfigPath": "./.github/ct.yaml"
-      }
-    ],
-    ["@semantic-release/git",
-      {
-        "assets": ["CHANGELOG.md", "charts/**"],
-        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
-      }
-    ],
+    ["semantic-release-helm", {
+      "chartPath": "./charts/test",
+      "crPublish": true,
+      "crConfigPath": "./.github/ct.yaml"
+    }],
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md", "charts/**"],
+      "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+    }],
+    ["semantic-release-docker", {
+      "name": "nousefreak/imagename"
+    }],
     ["@semantic-release/github"]
   ],
   "branches": ["master", "main"]
