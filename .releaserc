@@ -9,7 +9,14 @@
         "crPublish": true,
         "crConfigPath": "./.github/ct.yaml"
       }
-    ]
+    ],
+    ["@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md", "charts/**"],
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ],
+    ["@semantic-release/github"]
   ],
   "branches": ["master", "main"]
 }
