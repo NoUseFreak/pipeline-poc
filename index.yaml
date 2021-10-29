@@ -2,93 +2,13 @@ apiVersion: v1
 entries:
   test:
   - apiVersion: v2
-    appVersion: 1.55.0
-    created: "2021-10-29T01:29:04.823532+02:00"
+    appVersion: 1.64.0
+    created: "2021-10-29T00:53:21.799159459Z"
     description: A Helm chart for Kubernetes
-    digest: 54ed8e83105e28bc6690ec4a8a4f1680199e238904cf576e3f39331b636b2c2d
+    digest: bf20e07fb4ff36b597b922e57d603936297334c8ae0baee1bb1d74393fa4ecd6
     name: test
     type: application
     urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.46.0/test-0.46.0.tgz
-    version: 0.46.0
-  - apiVersion: v2
-    appVersion: 1.54.0
-    created: "2021-10-29T01:29:04.633174+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 83bf54c6cc3bc56e002bff1a59ebb13804b8d345035db2c77881ed3848c20572
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.45.0/test-0.45.0.tgz
-    version: 0.45.0
-  - apiVersion: v2
-    appVersion: 1.52.0
-    created: "2021-10-29T01:09:22.498591+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 86c1cee711d2651f2449333ca6741df25dc3ea4e8d2685cfff77bb2e10a48001
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.43.0/test-0.43.0.tgz
-    version: 0.43.0
-  - apiVersion: v2
-    appVersion: 1.51.0
-    created: "2021-10-29T01:08:27.70289+02:00"
-    description: A Helm chart for Kubernetes
-    digest: f0b7230ff463e18a8198b72090724747f42098d0012fa6fdf58f65f749048c8c
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.42.0/test-0.42.0.tgz
-    version: 0.42.0
-  - apiVersion: v2
-    appVersion: 1.50.0
-    created: "2021-10-29T01:08:27.532966+02:00"
-    description: A Helm chart for Kubernetes
-    digest: daee3243d23aef082412da7cc14d75cc31101f0c1aed3cb985f5dcf8853df9fe
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.41.0/test-0.41.0.tgz
-    version: 0.41.0
-  - apiVersion: v2
-    appVersion: 1.49.0
-    created: "2021-10-29T01:08:26.691522+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 029b5624ba49762f244dc292c7c2bff3a4453cd279e9de6ce1d5528224322304
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.40.0/test-0.40.0.tgz
-    version: 0.40.0
-  - apiVersion: v2
-    appVersion: 1.46.0
-    created: "2021-10-29T00:43:28.492416+02:00"
-    description: A Helm chart for Kubernetes
-    digest: aa380860b9d3ba4ce88efd8031cad6adc5aa448dd03b4cc72fc888d1cb94ab0b
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.37.0/test-0.37.0.tgz
-    version: 0.37.0
-  - apiVersion: v2
-    appVersion: 1.45.0
-    created: "2021-10-29T00:43:28.312877+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 8fbb092d4863e7cffd04d697736fc37d6c201afb23129231b30fef2901f45b1c
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.36.0/test-0.36.0.tgz
-    version: 0.36.0
-  - apiVersion: v2
-    appVersion: 1.44.0
-    created: "2021-10-29T00:43:28.128466+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 87597966ce2c797840b86513fad0deb4776dab63f4342de55769e6218c8722ea
-    name: test
-    type: application
-    urls:
-    - https://github.com/NoUseFreak/pipeline-poc/releases/download/test-0.35.0/test-0.35.0.tgz
-    version: 0.35.0
-generated: "2021-10-29T01:29:04.823603+02:00"
+    - https://github.com/NoUseFreak/NoUseFreak/releases/download/test-0.52.0/test-0.52.0.tgz
+    version: 0.52.0
+generated: "2021-10-29T00:53:21.799165959Z"
