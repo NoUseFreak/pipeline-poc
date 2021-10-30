@@ -14,3 +14,4 @@ jobs:
       cr_config_path: './.github/ct.yaml'
     secrets:
       token: ${{ secrets.GH_TOKEN }}
+
