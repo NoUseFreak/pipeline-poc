@@ -14,3 +14,10 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
+nav:
+  - Overview: index.md
+  - core-concepts.md
+  - User Guide:
+    - Beginner: beginner
+    - Advanced: advanced
+  - what.md
