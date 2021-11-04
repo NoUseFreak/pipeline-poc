@@ -18,6 +18,8 @@ nav:
   - Overview: index.md
   - core-concepts.md
   - User Guide:
-    - Beginner: docs/user_guide/beginner/
-    - Advanced: docs/user_guide/advanced/
+    - Beginner: 
+      - user_guide/beginner/bla.md
+    - Advanced: 
+      - user_guide/advanced/test.md
   - what.md
