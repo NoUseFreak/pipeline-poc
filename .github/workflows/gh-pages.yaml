@@ -10,14 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-python@v1
         with:
           python-version: 3.9
-      - uses: actions/setup-go@v1
-        with:
-          go-version: '1.17'
+
       - run: pip install mkdocs==1.0.4 mkdocs_material==4.1.1
+      - run: mkdocs build
+
       - uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./site
