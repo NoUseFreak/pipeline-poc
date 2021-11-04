@@ -1,1 +1,1 @@
-# Core contepts
+# Core concepts
