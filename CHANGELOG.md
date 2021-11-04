@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.80.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.79.0...v1.80.0) (2021-11-04)
+
+
+### Features
+
+* Docs ([8b756fd](https://github.com/NoUseFreak/pipeline-poc/commit/8b756fda49d43a7639ff8c9dcd493303c7bcb7e0))
+
 # [1.79.0](https://github.com/NoUseFreak/pipeline-poc/compare/v1.78.22...v1.79.0) (2021-10-30)
 
 
